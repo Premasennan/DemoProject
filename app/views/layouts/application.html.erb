@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MyProject</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div class="Navbar">
+      <nav class="Navbar__Items">
+        
+      </nav>
+      <nav class="Navbar__Items Navbar__Items--right">
+        <% if current_user %>
+          <a href="/sign_out" data-method="DELETE" class="Navbar__Link">Sign Out</a>
+        <% else %>  
+          <a href="/sign_in" class="Navbar__Link">Sign In</a>          
+        <% end %>  
+      </nav>
+    </div>
+    <%= yield %>
+  </body>
+
+  <script type="text/javascript">
+    function sign_out() {
+      $.aja
+    }
+  </script>
+</html>
